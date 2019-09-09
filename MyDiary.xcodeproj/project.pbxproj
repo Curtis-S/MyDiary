@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D2B45F623237F310000075C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D2B45F523237F310000075C /* MapKit.framework */; };
+		5D2B45FB23238CC60000075C /* EntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2B45FA23238CC60000075C /* EntryViewModel.swift */; };
+		5D2EB151232408BE008FB1E8 /* LocationManagerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2EB150232408BE008FB1E8 /* LocationManagerHelper.swift */; };
 		5D569F6A231C18EB00B13D51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D569F69231C18EB00B13D51 /* AppDelegate.swift */; };
 		5D569F6D231C18EB00B13D51 /* MyDiary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5D569F6B231C18EB00B13D51 /* MyDiary.xcdatamodeld */; };
 		5D569F6F231C18EB00B13D51 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D569F6E231C18EB00B13D51 /* MasterViewController.swift */; };
@@ -14,9 +17,23 @@
 		5D569F74231C18EB00B13D51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D569F72231C18EB00B13D51 /* Main.storyboard */; };
 		5D569F76231C18EC00B13D51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D569F75231C18EC00B13D51 /* Assets.xcassets */; };
 		5D569F79231C18EC00B13D51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D569F77231C18EC00B13D51 /* LaunchScreen.storyboard */; };
+		5DE8CBD22322965300C6707C /* Event+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE8CBCC2322965300C6707C /* Event+CoreDataClass.swift */; };
+		5DE8CBD32322965300C6707C /* Event+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE8CBCD2322965300C6707C /* Event+CoreDataProperties.swift */; };
+		5DE8CBD42322965300C6707C /* Photo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE8CBCE2322965300C6707C /* Photo+CoreDataClass.swift */; };
+		5DE8CBD52322965300C6707C /* Photo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE8CBCF2322965300C6707C /* Photo+CoreDataProperties.swift */; };
+		5DE8CBD72322989100C6707C /* CoreStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE8CBD62322989100C6707C /* CoreStack.swift */; };
+		5DE8CBD9232299D800C6707C /* FechtedResultControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE8CBD8232299D800C6707C /* FechtedResultControllers.swift */; };
+		5DE8CBDC23229EA000C6707C /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE8CBDB23229EA000C6707C /* TableViewDataSource.swift */; };
+		5DE8CBDE23229F6800C6707C /* EntryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE8CBDD23229F6800C6707C /* EntryViewCell.swift */; };
+		5DE8CBE02322B88E00C6707C /* AddEntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE8CBDF2322B88E00C6707C /* AddEntryController.swift */; };
+		5DE8CBE22322C7CC00C6707C /* GeoLocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE8CBE12322C7CC00C6707C /* GeoLocationController.swift */; };
+		5DE8CBE52322CFC400C6707C /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE8CBE42322CFC400C6707C /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D2B45F523237F310000075C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		5D2B45FA23238CC60000075C /* EntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewModel.swift; sourceTree = "<group>"; };
+		5D2EB150232408BE008FB1E8 /* LocationManagerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerHelper.swift; sourceTree = "<group>"; };
 		5D569F66231C18EB00B13D51 /* MyDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D569F69231C18EB00B13D51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D569F6C231C18EB00B13D51 /* MyDiary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyDiary.xcdatamodel; sourceTree = "<group>"; };
@@ -26,6 +43,18 @@
 		5D569F75231C18EC00B13D51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D569F78231C18EC00B13D51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D569F7A231C18EC00B13D51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DE8CBC92322915B00C6707C /* MyDiary 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "MyDiary 2.xcdatamodel"; sourceTree = "<group>"; };
+		5DE8CBCC2322965300C6707C /* Event+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5DE8CBCD2322965300C6707C /* Event+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		5DE8CBCE2322965300C6707C /* Photo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Photo+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5DE8CBCF2322965300C6707C /* Photo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Photo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		5DE8CBD62322989100C6707C /* CoreStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreStack.swift; sourceTree = "<group>"; };
+		5DE8CBD8232299D800C6707C /* FechtedResultControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FechtedResultControllers.swift; sourceTree = "<group>"; };
+		5DE8CBDB23229EA000C6707C /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
+		5DE8CBDD23229F6800C6707C /* EntryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewCell.swift; sourceTree = "<group>"; };
+		5DE8CBDF2322B88E00C6707C /* AddEntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEntryController.swift; sourceTree = "<group>"; };
+		5DE8CBE12322C7CC00C6707C /* GeoLocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoLocationController.swift; sourceTree = "<group>"; };
+		5DE8CBE42322CFC400C6707C /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +62,43 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D2B45F623237F310000075C /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D2B45F423237F310000075C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5D2B45F523237F310000075C /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5D2B45F7232389770000075C /* VeiwModels */ = {
+			isa = PBXGroup;
+			children = (
+				5D2B45FA23238CC60000075C /* EntryViewModel.swift */,
+			);
+			path = VeiwModels;
+			sourceTree = "<group>";
+		};
+		5D2EB14F2324089E008FB1E8 /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5D2EB150232408BE008FB1E8 /* LocationManagerHelper.swift */,
+			);
+			path = helpers;
+			sourceTree = "<group>";
+		};
 		5D569F5D231C18EB00B13D51 = {
 			isa = PBXGroup;
 			children = (
 				5D569F68231C18EB00B13D51 /* MyDiary */,
 				5D569F67231C18EB00B13D51 /* Products */,
+				5D2B45F423237F310000075C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,16 +113,69 @@
 		5D569F68231C18EB00B13D51 /* MyDiary */ = {
 			isa = PBXGroup;
 			children = (
+				5D2EB14F2324089E008FB1E8 /* helpers */,
+				5D2B45F7232389770000075C /* VeiwModels */,
+				5DE8CBE32322CFA600C6707C /* Permissions */,
+				5DE8CBDA23229E8300C6707C /* Data Sources */,
+				5D569F82231C196600B13D51 /* views */,
+				5D569F81231C195C00B13D51 /* Controlllers */,
+				5D569F80231C194500B13D51 /* Models */,
 				5D569F69231C18EB00B13D51 /* AppDelegate.swift */,
-				5D569F6E231C18EB00B13D51 /* MasterViewController.swift */,
-				5D569F70231C18EB00B13D51 /* DetailViewController.swift */,
-				5D569F72231C18EB00B13D51 /* Main.storyboard */,
 				5D569F75231C18EC00B13D51 /* Assets.xcassets */,
 				5D569F77231C18EC00B13D51 /* LaunchScreen.storyboard */,
 				5D569F7A231C18EC00B13D51 /* Info.plist */,
 				5D569F6B231C18EB00B13D51 /* MyDiary.xcdatamodeld */,
 			);
 			path = MyDiary;
+			sourceTree = "<group>";
+		};
+		5D569F80231C194500B13D51 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5DE8CBCC2322965300C6707C /* Event+CoreDataClass.swift */,
+				5DE8CBCD2322965300C6707C /* Event+CoreDataProperties.swift */,
+				5DE8CBCE2322965300C6707C /* Photo+CoreDataClass.swift */,
+				5DE8CBCF2322965300C6707C /* Photo+CoreDataProperties.swift */,
+				5DE8CBD62322989100C6707C /* CoreStack.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5D569F81231C195C00B13D51 /* Controlllers */ = {
+			isa = PBXGroup;
+			children = (
+				5DE8CBD8232299D800C6707C /* FechtedResultControllers.swift */,
+				5D569F6E231C18EB00B13D51 /* MasterViewController.swift */,
+				5D569F70231C18EB00B13D51 /* DetailViewController.swift */,
+				5DE8CBDF2322B88E00C6707C /* AddEntryController.swift */,
+				5DE8CBE12322C7CC00C6707C /* GeoLocationController.swift */,
+			);
+			path = Controlllers;
+			sourceTree = "<group>";
+		};
+		5D569F82231C196600B13D51 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				5D569F72231C18EB00B13D51 /* Main.storyboard */,
+				5DE8CBDD23229F6800C6707C /* EntryViewCell.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		5DE8CBDA23229E8300C6707C /* Data Sources */ = {
+			isa = PBXGroup;
+			children = (
+				5DE8CBDB23229EA000C6707C /* TableViewDataSource.swift */,
+			);
+			path = "Data Sources";
+			sourceTree = "<group>";
+		};
+		5DE8CBE32322CFA600C6707C /* Permissions */ = {
+			isa = PBXGroup;
+			children = (
+				5DE8CBE42322CFC400C6707C /* LocationManager.swift */,
+			);
+			path = Permissions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,6 +210,11 @@
 				TargetAttributes = {
 					5D569F65231C18EB00B13D51 = {
 						CreatedOnToolsVersion = 10.3;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -141,9 +254,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D2B45FB23238CC60000075C /* EntryViewModel.swift in Sources */,
 				5D569F6A231C18EB00B13D51 /* AppDelegate.swift in Sources */,
+				5DE8CBE52322CFC400C6707C /* LocationManager.swift in Sources */,
+				5DE8CBD22322965300C6707C /* Event+CoreDataClass.swift in Sources */,
+				5DE8CBD72322989100C6707C /* CoreStack.swift in Sources */,
 				5D569F6D231C18EB00B13D51 /* MyDiary.xcdatamodeld in Sources */,
+				5DE8CBE02322B88E00C6707C /* AddEntryController.swift in Sources */,
+				5DE8CBDE23229F6800C6707C /* EntryViewCell.swift in Sources */,
 				5D569F6F231C18EB00B13D51 /* MasterViewController.swift in Sources */,
+				5DE8CBD42322965300C6707C /* Photo+CoreDataClass.swift in Sources */,
+				5DE8CBD32322965300C6707C /* Event+CoreDataProperties.swift in Sources */,
+				5D2EB151232408BE008FB1E8 /* LocationManagerHelper.swift in Sources */,
+				5DE8CBD52322965300C6707C /* Photo+CoreDataProperties.swift in Sources */,
+				5DE8CBDC23229EA000C6707C /* TableViewDataSource.swift in Sources */,
+				5DE8CBD9232299D800C6707C /* FechtedResultControllers.swift in Sources */,
+				5DE8CBE22322C7CC00C6707C /* GeoLocationController.swift in Sources */,
 				5D569F71231C18EB00B13D51 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,6 +475,7 @@
 		5D569F6B231C18EB00B13D51 /* MyDiary.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				5DE8CBC92322915B00C6707C /* MyDiary 2.xcdatamodel */,
 				5D569F6C231C18EB00B13D51 /* MyDiary.xcdatamodel */,
 			);
 			currentVersion = 5D569F6C231C18EB00B13D51 /* MyDiary.xcdatamodel */;
