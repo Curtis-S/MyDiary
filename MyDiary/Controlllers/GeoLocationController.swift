@@ -16,14 +16,27 @@ class GeoLocationController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     
     let clGeocoderManger = CLGeocoder()
+    var locationcood :CLLocation? {
+        
+        didSet{
+            zoomIntoLocation()
+        }
+    }
     
     weak var addEntryController:AddEntryController?
     
     
+    fileprivate func zoomIntoLocation() {
+        if let  location = locationcood {
+            print("in hereee")
+            zoomMapintoLocation(lat: location.coordinate.latitude, Long: location.coordinate.longitude)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        zoomMapintoLocation(lat: 37.33233141, Long: -122.0312186)
+        
         self.mapView.showsUserLocation = true
     }
     
@@ -38,7 +51,7 @@ class GeoLocationController: UIViewController {
         
         if let controller = self.addEntryController {
        
-            if let location = controller.locationManager.locationcood {
+            if let location = locationcood {
                 
                 
                 clGeocoderManger.reverseGeocodeLocation(location){  placmarks ,error in
@@ -51,22 +64,16 @@ class GeoLocationController: UIViewController {
                         self.dismiss(animated: true, completion: nil)
                     } else {
                         
-                        print(error?.localizedDescription)
+                        print(error!.localizedDescription)
                     }
                     
                 }
+            } else {
+                
+                   displayAlert(text: "Location Error", message: "cannot get location please check connection")
             }
            
             
-            
-//            if location == nil {
-//                //  note -add error
-//                print(location)
-//                displayAlert(text: "Location Error", message: "cannot get location please check connection")
-//            } else {
-//                controller.locationPlacemark = location
-//                dismiss(animated: true, completion: nil)
-//            }
             
             
         }
@@ -105,3 +112,36 @@ extension GeoLocationController {
     }
     
 }
+
+extension GeoLocationController: CLLocationManagerDelegate{
+    
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse {
+            
+            
+        }else {
+            
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        guard let error = error as? CLError else {
+            return
+        }
+        print(error.localizedDescription)
+        
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.last else {
+            print("error")
+            return
+        }
+        self.locationcood = location
+        print("got location")
+        
+      
+    }
+}
+

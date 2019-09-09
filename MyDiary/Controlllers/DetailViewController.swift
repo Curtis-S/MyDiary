@@ -14,6 +14,8 @@ class DetailViewController: UIViewController {
         case enabled, disabled
     }
 
+    @IBOutlet weak var editedDateLabel: UILabel!
+    @IBOutlet weak var lastEditedOnLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
 
     @IBOutlet weak var commentTextField: UITextView!
@@ -26,8 +28,17 @@ class DetailViewController: UIViewController {
     var context: NSManagedObjectContext?
     
     func configureView() {
+       
         // Update the user interface for the detail item.
         if let detail = detailItem {
+             let dateFormatter = DateFormatter()
+            if let editedDate = detail.editedOn {
+                lastEditedOnLabel.isHidden = false
+                editedDateLabel.isHidden = false
+                 dateFormatter.dateFormat = "MM-dd-yyyy HH:mm"
+                editedDateLabel.text = dateFormatter.string(from: editedDate as Date)
+                
+            }
             commentTextField.text = detail.comment
             
             if let loacation = detail.location{
@@ -37,15 +48,20 @@ class DetailViewController: UIViewController {
                  geoLocationInfoLabel.text = "no location saved"
             }
             
-            dateLabel.text = String(describing: detail.createdOn)
+            dateFormatter.dateFormat = "EEEE, d MMMM yyyy HH:mm:ss"
+           
+            dateLabel.text = dateFormatter.string(from: detail.createdOn! as Date)
         }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        lastEditedOnLabel.isHidden = true
+        editedDateLabel.isHidden = true
         
-       
+        SaveButton.isHidden = true
+        cancelEditingButton.isHidden = true
         
         
         configureView()
@@ -64,6 +80,7 @@ class DetailViewController: UIViewController {
             return
         }
         entry.comment = comment
+        entry.editedOn = Date() as NSDate
         context!.saveChanges()
     }
     
@@ -79,10 +96,11 @@ class DetailViewController: UIViewController {
     @IBAction func activateEditMode(_ sender: Any) {
         changeEditMode(to: .enabled)
     }
-    @IBAction func test(_ sender: Any) {
+    @IBAction func save(_ sender: Any) {
         changeEntryText(to:commentTextField.text!)
         print("chanegd")
-       self.navigationController?.popViewController(animated: true)
+        configureView()
+      changeEditMode(to: .disabled)
     
         
         //self.dismiss(animated: true, completion: nil)
@@ -107,8 +125,8 @@ class DetailViewController: UIViewController {
             cancelEditingButton.isHidden = false
             
         case .disabled:
-            commentTextField.isSelectable = true
-            commentTextField.isEditable = true
+            commentTextField.isSelectable = false
+            commentTextField.isEditable = false
             SaveButton.isHidden = true
             cancelEditingButton.isHidden = true
             commentTextField.layer.borderWidth = 0

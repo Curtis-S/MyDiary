@@ -32,7 +32,10 @@ class AddEntryController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE, d MMMM yyyy "
+        
+        dateLabel.text = dateFormatter.string(from: Date())
         // Do any additional setup after loading the view.
         
         let saveButton = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveEntry))
@@ -62,9 +65,10 @@ class AddEntryController: UIViewController {
     
     @IBAction func addLocation(_ sender: Any) {
         if requestLocation() {
-            locationManager.requestLocation()
-            let MapVC = self.storyboard!.instantiateViewController(withIdentifier: "MapVC") as! GeoLocationController
             
+            let MapVC = self.storyboard!.instantiateViewController(withIdentifier: "MapVC") as! GeoLocationController
+            self.locationManager.manager.delegate = MapVC
+            locationManager.requestLocation()
             MapVC.addEntryController = self
             
             self.present(MapVC, animated: true, completion: nil)

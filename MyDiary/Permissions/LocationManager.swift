@@ -17,7 +17,7 @@ enum LocationError:Error {
 }
 
 class LocationManager : NSObject {
-    private let manager = CLLocationManager()
+   let manager = CLLocationManager()
     let clGeocoderManger = CLGeocoder()
     var locationcood :CLLocation?
     var locationPlace:CLPlacemark?
@@ -26,7 +26,7 @@ class LocationManager : NSObject {
     
     override init() {
         super.init()
-        manager.delegate = self
+        
     }
     
     func requestLocationAuthorization() throws {
@@ -80,7 +80,7 @@ class LocationManager : NSObject {
                 print("")
                 self.locationPlace = place.first
                 completion(place.first)
-                print(" country is \(self.locationPlace?.country)   city is \(self.locationPlace?.locality)    name is \(self.locationPlace?.name)")
+//                print(" country is \(self.locationPlace?.country)   city is \(self.locationPlace?.locality)    name is \(self.locationPlace?.name)")
             }
             
             
@@ -92,36 +92,6 @@ class LocationManager : NSObject {
     
 }
 
-extension LocationManager: CLLocationManagerDelegate{
-    
-    
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        if status == .authorizedWhenInUse {
-           
-            
-        }else {
-          
-        }
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        guard let error = error as? CLError else {
-            return
-        }
-        print(error.localizedDescription)
-        
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.last else {
-            print("error")
-            return
-        }
-         self.locationcood = location
-        
-        printlocation()
-    }
-}
 
 
 

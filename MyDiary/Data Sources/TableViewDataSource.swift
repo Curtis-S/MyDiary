@@ -25,7 +25,7 @@ class TableViewDataSource:  NSObject, UITableViewDataSource {
         let event = fetchedResultsController.object(at: indexPath)
         let date = event.createdOn
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd MMM, yyyy hh:mm:ss"
+        dateFormatter.dateFormat = "EEEE, d , MMMM"
         eventCell.dateLabel.text =  dateFormatter.string(from: date! as Date)
         eventCell.entryCommentLabel.text = event.comment
         if let location = event.location {
