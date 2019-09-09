@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		5D2B45F623237F310000075C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D2B45F523237F310000075C /* MapKit.framework */; };
 		5D2B45FB23238CC60000075C /* EntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2B45FA23238CC60000075C /* EntryViewModel.swift */; };
-		5D2EB151232408BE008FB1E8 /* LocationManagerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2EB150232408BE008FB1E8 /* LocationManagerHelper.swift */; };
 		5D569F6A231C18EB00B13D51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D569F69231C18EB00B13D51 /* AppDelegate.swift */; };
 		5D569F6D231C18EB00B13D51 /* MyDiary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5D569F6B231C18EB00B13D51 /* MyDiary.xcdatamodeld */; };
 		5D569F6F231C18EB00B13D51 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D569F6E231C18EB00B13D51 /* MasterViewController.swift */; };
@@ -33,7 +32,6 @@
 /* Begin PBXFileReference section */
 		5D2B45F523237F310000075C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		5D2B45FA23238CC60000075C /* EntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewModel.swift; sourceTree = "<group>"; };
-		5D2EB150232408BE008FB1E8 /* LocationManagerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerHelper.swift; sourceTree = "<group>"; };
 		5D569F66231C18EB00B13D51 /* MyDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D569F69231C18EB00B13D51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D569F6C231C18EB00B13D51 /* MyDiary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyDiary.xcdatamodel; sourceTree = "<group>"; };
@@ -85,14 +83,6 @@
 			path = VeiwModels;
 			sourceTree = "<group>";
 		};
-		5D2EB14F2324089E008FB1E8 /* helpers */ = {
-			isa = PBXGroup;
-			children = (
-				5D2EB150232408BE008FB1E8 /* LocationManagerHelper.swift */,
-			);
-			path = helpers;
-			sourceTree = "<group>";
-		};
 		5D569F5D231C18EB00B13D51 = {
 			isa = PBXGroup;
 			children = (
@@ -113,7 +103,6 @@
 		5D569F68231C18EB00B13D51 /* MyDiary */ = {
 			isa = PBXGroup;
 			children = (
-				5D2EB14F2324089E008FB1E8 /* helpers */,
 				5D2B45F7232389770000075C /* VeiwModels */,
 				5DE8CBE32322CFA600C6707C /* Permissions */,
 				5DE8CBDA23229E8300C6707C /* Data Sources */,
@@ -265,7 +254,6 @@
 				5D569F6F231C18EB00B13D51 /* MasterViewController.swift in Sources */,
 				5DE8CBD42322965300C6707C /* Photo+CoreDataClass.swift in Sources */,
 				5DE8CBD32322965300C6707C /* Event+CoreDataProperties.swift in Sources */,
-				5D2EB151232408BE008FB1E8 /* LocationManagerHelper.swift in Sources */,
 				5DE8CBD52322965300C6707C /* Photo+CoreDataProperties.swift in Sources */,
 				5DE8CBDC23229EA000C6707C /* TableViewDataSource.swift in Sources */,
 				5DE8CBD9232299D800C6707C /* FechtedResultControllers.swift in Sources */,

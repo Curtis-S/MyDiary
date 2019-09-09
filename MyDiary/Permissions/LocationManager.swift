@@ -22,7 +22,6 @@ class LocationManager : NSObject {
     var locationcood :CLLocation?
     var locationPlace:CLPlacemark?
     
-    var delegate: LocationManagerHelper?
     
     override init() {
         super.init()
@@ -67,30 +66,13 @@ class LocationManager : NSObject {
     }
     
     
-    //
-   func printlocation(){
-    if let locaction = locationcood {
-        print("\(locaction.coordinate.latitude) and \(locaction.coordinate.longitude)")
+ 
+  
     }
-    }
-    
-    func getdestination(location:CLLocation,completion: @escaping (CLPlacemark?)->()  ){
-        clGeocoderManger.reverseGeocodeLocation(location){ placmarks ,error in
-            if let place = placmarks {
-                print("")
-                self.locationPlace = place.first
-                completion(place.first)
-//                print(" country is \(self.locationPlace?.country)   city is \(self.locationPlace?.locality)    name is \(self.locationPlace?.name)")
-            }
-            
-            
-            
-        }
-    }
+
     
     
-    
-}
+
 
 
 

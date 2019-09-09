@@ -68,12 +68,7 @@ class DetailViewController: UIViewController {
     }
 
     
-    var detailItem: Event? {
-        didSet {
-            // Update the view.
-       
-        }
-    }
+    var detailItem: Event? 
     
     func changeEntryText(to comment:String){
         guard let entry = detailItem else {
@@ -84,14 +79,14 @@ class DetailViewController: UIViewController {
         context!.saveChanges()
     }
     
-    @IBAction func dissssmisss(_ sender: Any) {
-        self.masterController?.navigationController?.popToRootViewController(animated:true)
-         print("pop")
-        self.masterController?.navigationController?.popViewController(animated: true)
-        print("pop")
-        dismiss(animated: true, completion: nil)
-        print("dismiss")
-    }
+//    @IBAction func dissssmisss(_ sender: Any) {
+//        self.masterController?.navigationController?.popToRootViewController(animated:true)
+//         print("pop")
+//        self.masterController?.navigationController?.popViewController(animated: true)
+//        print("pop")
+//        dismiss(animated: true, completion: nil)
+//        print("dismiss")
+//    }
     
     @IBAction func activateEditMode(_ sender: Any) {
         changeEditMode(to: .enabled)
@@ -112,8 +107,6 @@ class DetailViewController: UIViewController {
         
     }
     
-    
-    //
     func changeEditMode(to mode:EditMode)  {
         switch mode {
         case .enabled:

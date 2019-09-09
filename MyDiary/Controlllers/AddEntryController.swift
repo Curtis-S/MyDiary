@@ -36,7 +36,9 @@ class AddEntryController: UIViewController {
         dateFormatter.dateFormat = "EEEE, d MMMM yyyy "
         
         dateLabel.text = dateFormatter.string(from: Date())
-        // Do any additional setup after loading the view.
+        inputTextView.layer.borderWidth = 1
+        inputTextView.layer.borderColor = UIColor.red.cgColor
+        inputTextView.becomeFirstResponder()
         
         let saveButton = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveEntry))
         self.navigationItem.rightBarButtonItem = saveButton
@@ -107,14 +109,5 @@ class AddEntryController: UIViewController {
         return true
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

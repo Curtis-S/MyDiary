@@ -51,22 +51,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i05-uh-7sG">
-                                <rect key="frame" x="59" y="196" width="316" height="532"/>
+                                <rect key="frame" x="59" y="196" width="316" height="546"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qai-vz-fU1">
-                                <rect key="frame" x="275" y="796" width="112" height="30"/>
-                                <color key="backgroundColor" red="0.38043004270000003" green="0.62917232509999999" blue="0.74119371180000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Cancel Changes">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="cancelEditMode:" destination="JEX-9P-axG" eventType="touchUpInside" id="1xN-4f-2yV"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uSk-Bf-CoY">
                                 <rect key="frame" x="28" y="796" width="102" height="30"/>
                                 <color key="backgroundColor" red="0.38043004270000003" green="0.62917232509999999" blue="0.74119371180000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -77,21 +67,14 @@
                                     <action selector="save:" destination="JEX-9P-axG" eventType="touchUpInside" id="ZT0-Vp-vgf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ACs-sj-gWh">
-                                <rect key="frame" x="184" y="790" width="46" height="42"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="dissssmisss:" destination="JEX-9P-axG" eventType="touchUpInside" id="jUG-zf-eQ5"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="manna avenue - wilmingtion NC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PqC-Pz-qqR">
-                                <rect key="frame" x="74" y="715" width="313" height="73"/>
+                                <rect key="frame" x="74" y="729" width="242.5" height="59"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn_geolocate" translatesAutoresizingMaskIntoConstraints="NO" id="iEG-oP-Bam">
-                                <rect key="frame" x="17" y="736" width="44" height="31"/>
+                                <rect key="frame" x="17" y="750" width="44" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="44" id="vWk-MC-7wy"/>
                                 </constraints>
@@ -111,29 +94,35 @@
                                 <color key="textColor" red="0.61245548729999999" green="0.6419693232" blue="0.70589184760000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qai-vz-fU1">
+                                <rect key="frame" x="263" y="796" width="112" height="30"/>
+                                <color key="backgroundColor" red="0.38043004270000003" green="0.62917232509999999" blue="0.74119371180000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Cancel Changes">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelEditMode:" destination="JEX-9P-axG" eventType="touchUpInside" id="1xN-4f-2yV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ACs-sj-gWh" firstAttribute="baseline" secondItem="Qai-vz-fU1" secondAttribute="baseline" id="0M0-Oo-8hr"/>
-                            <constraint firstItem="ACs-sj-gWh" firstAttribute="top" secondItem="PqC-Pz-qqR" secondAttribute="bottom" constant="2" id="1Kp-Ce-5c9"/>
                             <constraint firstItem="PqC-Pz-qqR" firstAttribute="leading" secondItem="iEG-oP-Bam" secondAttribute="trailing" constant="13" id="4rs-gW-6dQ"/>
                             <constraint firstItem="iEG-oP-Bam" firstAttribute="leading" secondItem="VUw-jc-0yf" secondAttribute="leading" constant="17" id="5IT-9M-Y9C"/>
                             <constraint firstItem="VUw-jc-0yf" firstAttribute="trailing" secondItem="rhA-Mu-7Hr" secondAttribute="trailing" id="7Qc-RM-Jfs"/>
-                            <constraint firstItem="ACs-sj-gWh" firstAttribute="centerX" secondItem="rhA-Mu-7Hr" secondAttribute="centerX" id="Adv-DQ-bTb"/>
+                            <constraint firstItem="Qai-vz-fU1" firstAttribute="baseline" secondItem="uSk-Bf-CoY" secondAttribute="baseline" id="DdS-oj-fI7"/>
                             <constraint firstItem="i05-uh-7sG" firstAttribute="leading" secondItem="VUw-jc-0yf" secondAttribute="leading" constant="59" id="FW8-tA-T9u"/>
                             <constraint firstItem="uSk-Bf-CoY" firstAttribute="leading" secondItem="VUw-jc-0yf" secondAttribute="leading" constant="28" id="Hx3-aZ-mh9"/>
                             <constraint firstItem="Hfg-tZ-IIU" firstAttribute="leading" secondItem="uSk-Bf-CoY" secondAttribute="leading" id="J7R-TL-CGg"/>
+                            <constraint firstItem="Qai-vz-fU1" firstAttribute="trailing" secondItem="i05-uh-7sG" secondAttribute="trailing" id="NEo-tm-k9J"/>
                             <constraint firstItem="gdp-RV-ugr" firstAttribute="trailing" secondItem="svH-Pt-448" secondAttribute="trailingMargin" id="QAR-kN-ISr"/>
                             <constraint firstItem="uSk-Bf-CoY" firstAttribute="top" secondItem="PqC-Pz-qqR" secondAttribute="bottom" constant="8" symbolic="YES" id="Vyh-o2-ism"/>
                             <constraint firstItem="uSk-Bf-CoY" firstAttribute="top" secondItem="iEG-oP-Bam" secondAttribute="bottom" constant="29" id="XXx-vb-lGo"/>
                             <constraint firstItem="Hfg-tZ-IIU" firstAttribute="baseline" secondItem="gdp-RV-ugr" secondAttribute="baseline" id="ZLH-8D-MdI"/>
                             <constraint firstItem="gdp-RV-ugr" firstAttribute="leading" secondItem="Hfg-tZ-IIU" secondAttribute="trailing" constant="8" symbolic="YES" id="acG-m8-Bwb"/>
-                            <constraint firstItem="Qai-vz-fU1" firstAttribute="leading" secondItem="ACs-sj-gWh" secondAttribute="trailing" constant="45" id="boG-M8-fbR"/>
-                            <constraint firstItem="uSk-Bf-CoY" firstAttribute="baseline" secondItem="ACs-sj-gWh" secondAttribute="firstBaseline" id="jRW-Wd-GeT"/>
+                            <constraint firstItem="VUw-jc-0yf" firstAttribute="bottom" secondItem="Qai-vz-fU1" secondAttribute="bottom" constant="36" id="btm-3t-POR"/>
                             <constraint firstItem="rhA-Mu-7Hr" firstAttribute="top" secondItem="Hfg-tZ-IIU" secondAttribute="bottom" constant="8" symbolic="YES" id="k5l-5R-oyw"/>
-                            <constraint firstItem="VUw-jc-0yf" firstAttribute="bottom" secondItem="ACs-sj-gWh" secondAttribute="bottom" constant="30" id="kn1-cc-Jz8"/>
-                            <constraint firstItem="ACs-sj-gWh" firstAttribute="top" secondItem="i05-uh-7sG" secondAttribute="bottom" constant="62" id="nry-AQ-w4L"/>
-                            <constraint firstItem="PqC-Pz-qqR" firstAttribute="trailing" secondItem="Qai-vz-fU1" secondAttribute="trailing" id="onb-HB-NnI"/>
+                            <constraint firstItem="PqC-Pz-qqR" firstAttribute="trailing" secondItem="Qai-vz-fU1" secondAttribute="trailing" constant="-58.5" id="onb-HB-NnI"/>
                             <constraint firstItem="i05-uh-7sG" firstAttribute="top" secondItem="rhA-Mu-7Hr" secondAttribute="bottom" constant="28" id="pvP-dD-hNG"/>
                             <constraint firstItem="iEG-oP-Bam" firstAttribute="top" secondItem="i05-uh-7sG" secondAttribute="bottom" constant="8" symbolic="YES" id="qFf-Zs-smQ"/>
                             <constraint firstItem="VUw-jc-0yf" firstAttribute="trailing" secondItem="i05-uh-7sG" secondAttribute="trailing" constant="39" id="rkG-fG-hwe"/>
@@ -345,7 +334,7 @@
                             <outlet property="delegate" destination="7bK-jq-Zjz" id="RA6-mI-bju"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Master" id="Zdf-7t-Un8">
+                    <navigationItem key="navigationItem" title="Diary Entries" id="Zdf-7t-Un8">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="40h-p2-1rN">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -386,7 +375,7 @@
                                     <action selector="addLocation:" destination="Iov-A0-nty" eventType="touchUpInside" id="nvB-ni-hgR"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do " translatesAutoresizingMaskIntoConstraints="NO" id="K4w-qu-8GR">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Test Text " translatesAutoresizingMaskIntoConstraints="NO" id="K4w-qu-8GR">
                                 <rect key="frame" x="60" y="222" width="291" height="521"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
