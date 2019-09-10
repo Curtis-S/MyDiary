@@ -13,7 +13,7 @@ class MasterViewController: UITableViewController {
 
 
     var detailViewController: DetailViewController? = nil
-    var managedObjectContext: NSManagedObjectContext? = nil
+  
     let locationManager = LocationManager()
     
     
